@@ -1,0 +1,324 @@
+{
+  "apartments": [
+    {
+      "id": "gKj7VJwZz5Y7vQ8n2nGhL",
+      "address": "Storgatan 1",
+      "price": 6000,
+      "rooms": 2,
+      "area": 50,
+      "hot_water_included": true,
+      "has_elevator": false,
+      "geo_location": {
+        "latitude": 55.605,
+        "longitude": 13.003
+      },
+      "move_in_date": "2023-04-01",
+      "landlord": "ABC Fastigheter",
+      "type": "regular"
+    },
+    {
+      "id": "zGv5F5c5B5R5xS2f2qLyM",
+      "address": "Kungsgatan 2",
+      "price": 8000,
+      "rooms": 3,
+      "area": 70,
+      "hot_water_included": false,
+      "has_elevator": true,
+      "geo_location": {
+        "latitude": 55.609,
+        "longitude": 12.994
+      },
+      "move_in_date": "2023-05-01",
+      "landlord": "DEF Fastigheter",
+      "type": "student"
+    },
+    {
+      "id": "t4p4tXhLq3J6vP8c8rZrN",
+      "address": "Gustav Adolfs Torg 3",
+      "price": 12000,
+      "rooms": 4,
+      "area": 100,
+      "hot_water_included": true,
+      "has_elevator": true,
+      "geo_location": {
+        "latitude": 55.602,
+        "longitude": 13.0
+      },
+      "move_in_date": "2023-06-01",
+      "landlord": "GHI Fastigheter",
+      "type": "senior"
+    },
+    {
+      "id": "q3C6GJy8N8y6Xs2z2sGvK",
+      "address": "Södra Förstadsgatan 4",
+      "price": 9000,
+      "rooms": 3,
+      "area": 65,
+      "hot_water_included": false,
+      "has_elevator": false,
+      "geo_location": {
+        "latitude": 55.596,
+        "longitude": 13.002
+      },
+      "move_in_date": "2023-07-01",
+      "landlord": "JKL Fastigheter",
+      "type": "regular"
+    },
+    {
+      "id": "J2n6LxHsT2m6T8n8fMz6",
+      "address": "Davidshallsbron 5",
+      "price": 6500,
+      "rooms": 2,
+      "area": 55,
+      "hot_water_included": true,
+      "has_elevator": true,
+      "geo_location": {
+        "latitude": 55.611,
+        "longitude": 13.012
+      },
+      "move_in_date": "2023-08-01",
+      "landlord": "MNO Fastigheter",
+      "type": "regular"
+    },
+    {
+      "id": "y9H7vJzW8K8xLr3c3qFt",
+      "address": "Norra Vallgatan 6",
+      "price": 10000,
+      "rooms": 4,
+      "area": 80,
+      "hot_water_included": true,
+      "has_elevator": false,
+      "geo_location": {
+        "latitude": 55.604,
+        "longitude": 13.007
+      },
+      "move_in_date": "2023-09-01",
+      "landlord": "PQR Fastigheter",
+      "type": "regular"
+    },
+    {
+      "id": "W8y8R2yJ2M2sKv6v2nHd",
+      "address": "Per Weijersgatan 7",
+      "price": 7500,
+      "rooms": 3,
+      "area": 60,
+      "hot_water_included": false,
+      "has_elevator": false,
+      "geo_location": {
+        "latitude": 55.614,
+        "longitude": 12.99
+      },
+      "move_in_date": "2023-10-01",
+      "landlord": "STU Fastigheter",
+      "type": "regular"
+    },
+    {
+      "id": "n5s6Z7vT6W8zJ2n2yTf",
+      "address": "Föreningsgatan 8",
+      "price": 5500,
+      "rooms": 1,
+      "area": 35,
+      "hot_water_included": true,
+      "has_elevator": false,
+      "geo_location": {
+        "latitude": 55.599,
+        "longitude": 12.992
+      },
+      "move_in_date": "2023-11-01",
+      "landlord": "VWX Fastigheter",
+      "type": "student"
+    },
+    {
+      "id": "hLp4cN8xV5j7F5f2mGvH",
+      "address": "Södervärn 9",
+      "price": 8500,
+      "rooms": 3,
+      "area": 70,
+      "hot_water_included": true,
+      "has_elevator": true,
+      "geo_location": {
+        "latitude": 55.585,
+        "longitude": 13.004
+      },
+      "move_in_date": "2023-12-01",
+      "landlord": "YZA Fastigheter",
+      "type": "regular"
+    },
+    {
+      "id": "mKv6cN5mG2f8zS8hLxR",
+      "address": "Hyllie 10",
+      "price": 11000,
+      "rooms": 4,
+      "area": 90,
+      "hot_water_included": false,
+      "has_elevator": true,
+      "geo_location": {
+        "latitude": 55.56,
+        "longitude": 12.975
+      },
+      "move_in_date": "2024-01-01",
+      "landlord": "BCD Fastigheter",
+      "type": "regular"
+    },
+    {
+      "id": "5R7vY8zS5s4N4p3qFtH",
+      "address": "Östra Förstadsgatan 11",
+      "price": 8500,
+      "rooms": 3,
+      "area": 70,
+      "hot_water_included": true,
+      "has_elevator": false,
+      "geo_location": {
+        "latitude": 55.596,
+        "longitude": 13.003
+      },
+      "move_in_date": "2024-02-01",
+      "landlord": "EFG Fastigheter",
+      "type": "regular"
+    },
+    {
+      "id": "Lq8zS5xR2c6T8n6fMzH",
+      "address": "Baltzarsgatan 12",
+      "price": 5500,
+      "rooms": 1,
+      "area": 30,
+      "hot_water_included": true,
+      "has_elevator": false,
+      "geo_location": {
+        "latitude": 55.603,
+        "longitude": 13.002
+      },
+      "move_in_date": "2024-03-01",
+      "landlord": "HIJ Fastigheter",
+      "type": "regular"
+    },
+    {
+      "id": "y9q3C6vJzW8K8xLr2nHd",
+      "address": "Södra Tullgatan 13",
+      "price": 9500,
+      "rooms": 3,
+      "area": 75,
+      "hot_water_included": true,
+      "has_elevator": true,
+      "geo_location": {
+        "latitude": 55.595,
+        "longitude": 13.014
+      },
+      "move_in_date": "2024-04-01",
+      "landlord": "KLM Fastigheter",
+      "type": "senior"
+    },
+    {
+      "id": "T2m6T8n8fMz6J2n6LxH",
+      "address": "Lönngatan 14",
+      "price": 7500,
+      "rooms": 2,
+      "area": 55,
+      "hot_water_included": false,
+      "has_elevator": false,
+      "geo_location": {
+        "latitude": 55.597,
+        "longitude": 13.018
+      },
+      "move_in_date": "2024-05-01",
+      "landlord": "NOP Fastigheter",
+      "type": "regular"
+    },
+    {
+      "id": "sKv6v2nHdW8y8R2yJ2",
+      "address": "Hans Michelsensgatan 15",
+      "price": 6500,
+      "rooms": 2,
+      "area": 50,
+      "hot_water_included": true,
+      "has_elevator": false,
+      "geo_location": {
+        "latitude": 55.608,
+        "longitude": 13.005
+      },
+      "move_in_date": "2024-06-01",
+      "landlord": "QRS Fastigheter",
+      "type": "student"
+    },
+    {
+      "id": "M2sKv6cN5mG2f8zS8h",
+      "address": "Bergsgatan 16",
+      "price": 11500,
+      "rooms": 4,
+      "area": 95,
+      "hot_water_included": true,
+      "has_elevator": true,
+      "geo_location": {
+        "latitude": 55.603,
+        "longitude": 13.029
+      },
+      "move_in_date": "2024-07-01",
+      "landlord": "TUV Fastigheter",
+      "type": "senior"
+    },
+    {
+      "id": "Lp4cN8xV5j7F5f2mGv",
+      "address": "Norra Skolgatan 17",
+      "price": 8000,
+      "rooms": 3,
+      "area": 65,
+      "hot_water_included": false,
+      "has_elevator": false,
+      "geo_location": {
+        "latitude": 55.605,
+        "longitude": 13.018
+      },
+      "move_in_date": "2024-08-01",
+      "landlord": "WXY Fastigheter",
+      "type": "regular"
+    },
+    {
+      "id": "Hn5s6Z7vT6W8zJ2yTf",
+      "address": "Hyllievångsgatan 18",
+      "price": 6000,
+      "rooms": 2,
+      "area": 45,
+      "hot_water_included": true,
+      "has_elevator": false,
+      "geo_location": {
+        "latitude": 55.57,
+        "longitude": 12.983
+      },
+      "move_in_date": "2024-09-01",
+      "landlord": "ZAB Fastigheter",
+      "type": "student"
+    },
+    {
+      "id": "R5xS2f2qLyMzGv5F5c",
+      "address": "Kärleksgatan 19",
+      "price": 10500,
+      "rooms": 4,
+      "area": 85,
+      "hot_water_included": true,
+      "has_elevator": true,
+      "geo_location": {
+        "latitude": 55.593,
+        "longitude": 13.008
+      },
+      "move_in_date": "2024-10-01",
+      "landlord": "CDE Fastigheter",
+      "type": "regular"
+    },
+    {
+      "id": "vN8zS6xR2c5T8n7fMzJ",
+      "address": "Östra Rönneholmsvägen 20",
+      "price": 9500,
+      "rooms": 3,
+      "area": 70,
+      "hot_water_included": false,
+      "has_elevator": true,
+      "geo_location": {
+        "latitude": 55.579,
+        "longitude": 12.992
+      },
+      "move_in_date": "2024-11-01",
+      "landlord": "FGH Fastigheter",
+      "type": "regular"
+    }
+  ]
+}
