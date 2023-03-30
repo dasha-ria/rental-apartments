@@ -11,12 +11,21 @@ export default function Home({ apartments }) {
       <div className="flex gap-12 flex-wrap pt-8 justify-center items-center w-full">
         {apartments.map((apartment) => (
           <Link key={apartment.id} href={`/apartment/${apartment.id}`}>
-            <div className="p-4 flex flex-col gap-2 rounded-lg items-start hover:text-gray-600">
-              <div>
-                <img
-                  src={apartment.image}
-                  className="w-80 h-80 object-cover rounded-md"
-                ></img>
+            <div className="p-4 flex flex-col gap-2 rounded-lg items-start">
+              <div className="relative">
+                <div>
+                  <img
+                    src={apartment.image}
+                    className="w-80 h-80 object-cover rounded-md"
+                  ></img>
+                </div>
+                {apartment.type !== "regular" && (
+                  <div className="absolute top-4 right-8">
+                    <div className="rounded-md w-24 h-8 bg-white/80 flex justify-center items-center">
+                      <p>{apartment.type}</p>
+                    </div>
+                  </div>
+                )}
               </div>
               <div>
                 <p className="font-medium">{`${apartment.address}, Malmö`}</p>
