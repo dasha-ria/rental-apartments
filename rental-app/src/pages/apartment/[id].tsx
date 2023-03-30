@@ -23,30 +23,46 @@ export default function Apartment({ apartment }) {
 
       <img src="../logo.svg" className="h-10 w-auto pl-12 mt-8 mb-8"></img>
 
-      <img
-        src={apartment.image}
-        className="ml-12 w-pic h-pic object-cover rounded-md"
-      ></img>
-      <div className="pl-12 pt-2">
-        <p className="font-medium">{`${apartment.address}, Malmö`}</p>
-        <div className="flex flex-row gap-2 items-center">
-          <p>{`${apartment.price} kr`}</p>
-          <div className="w-half h-half rounded-lg bg-black"></div>
-          <p>{`${apartment.rooms} rooms`}</p>
-          <div className="w-half h-half rounded-lg bg-black"></div>
-          <p>{`${apartment.area} sqm`}</p>
+      <div className="flex flex-row items-start">
+        <div>
+          <img
+            src={apartment.image}
+            className="ml-12 w-pic h-pic object-cover rounded-md"
+          ></img>
         </div>
+        <div className="pl-12">
+          <p className="font-medium">{`${apartment.address}, Malmö`}</p>
+          <div className="flex flex-row gap-2 items-center">
+            <p>{`${apartment.price} kr`}</p>
+            <div className="w-half h-half rounded-lg bg-black"></div>
+            <p>{`${apartment.rooms} rooms`}</p>
+            <div className="w-half h-half rounded-lg bg-black"></div>
+            <p>{`${apartment.area} sqm`}</p>
+          </div>
 
-        <div className="w-96 h-thin bg-gray-200 mt-2 mb-2"></div>
+          <div className="w-96 h-thin bg-gray-200 mt-2 mb-2"></div>
 
-        <p>Move-in date: {apartment.move_in_date}</p>
-        <p>Landlord: {apartment.landlord}</p>
-        <p>Apartment type: {apartment.type}</p>
+          <p className="font-medium">
+            Elevator: <span className="font-normal">{elevator(apartment)}</span>
+          </p>
+          <p className="font-medium<">
+            Hot water:{" "}
+            <span className="font-normal">{hotWater(apartment)}</span>
+          </p>
+          <p className="font-medium">
+            Move-in date:{" "}
+            <span className="font-normal">{apartment.move_in_date}</span>
+          </p>
 
-        <div className="w-96 h-thin bg-gray-200 mt-2 mb-2"></div>
-
-        <p>Hot water: {hotWater(apartment)}</p>
-        <p>Elevator: {elevator(apartment)}</p>
+          <div className="w-96 h-thin bg-gray-200 mt-2 mb-2"></div>
+          <p className="font-medium">
+            Landlord: <span className="font-normal">{apartment.landlord}</span>
+          </p>
+          <p className="font-medium">
+            Apartment type:{" "}
+            <span className="font-normal">{apartment.type}</span>
+          </p>
+        </div>
       </div>
     </>
   );
