@@ -1,22 +1,35 @@
 import { GetServerSideProps } from "next";
+import Link from "next/link";
 
 export default function Home({ apartments }) {
   return (
     <>
       {/* <pre>{JSON.stringify(apartments, null, 2)}</pre> */}
 
-      {apartments.map((apartment) => (
-        <div key={apartment.id} className="flex flex-col">
-          <div>
-            <p>{apartment.address}</p>
-          </div>
-          <div className="flex flex-row gap-2">
-            <p>{apartment.rooms}</p>
-            <p>{apartment.area}</p>
-            <p>{apartment.price}</p>
-          </div>
-        </div>
-      ))}
+      <img src="logo.svg" className="h-10 w-auto pl-12 mt-8"></img>
+
+      <div className="flex gap-12 flex-wrap pt-8 justify-center items-center w-full">
+        {apartments.map((apartment) => (
+          <Link key={apartment.id} href={`/apartment/${apartment.id}`}>
+            <div className="p-4 flex flex-col gap-2 rounded-lg items-start hover:text-blue-800">
+              <div>
+                <img
+                  src={apartment.image}
+                  className="w-80 h-80 object-cover rounded-md"
+                ></img>
+              </div>
+              <div>
+                <p className="font-medium">{`${apartment.address}, Malmö`}</p>
+                <div className="flex flex-row gap-4">
+                  <p>{`${apartment.rooms} rooms`}</p>
+                  <p>{`${apartment.area} sqm`}</p>
+                  <p>{`${apartment.price} kr`}</p>
+                </div>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
     </>
   );
 }

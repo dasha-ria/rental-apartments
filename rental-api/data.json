@@ -14,7 +14,8 @@
       },
       "move_in_date": "2023-04-01",
       "landlord": "ABC Fastigheter",
-      "type": "regular"
+      "type": "regular",
+      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
     },
     {
       "id": "zGv5F5c5B5R5xS2f2qLyM",
@@ -30,7 +31,8 @@
       },
       "move_in_date": "2023-05-01",
       "landlord": "DEF Fastigheter",
-      "type": "student"
+      "type": "student",
+      "image": "https://images.unsplash.com/photo-1560448075-cbc16bb4af8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
     },
     {
       "id": "t4p4tXhLq3J6vP8c8rZrN",
@@ -46,7 +48,8 @@
       },
       "move_in_date": "2023-06-01",
       "landlord": "GHI Fastigheter",
-      "type": "senior"
+      "type": "senior",
+      "image": "https://images.unsplash.com/photo-1630699375895-fe5996d163ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
     },
     {
       "id": "q3C6GJy8N8y6Xs2z2sGvK",
@@ -62,7 +65,8 @@
       },
       "move_in_date": "2023-07-01",
       "landlord": "JKL Fastigheter",
-      "type": "regular"
+      "type": "regular",
+      "image": "https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
     },
     {
       "id": "J2n6LxHsT2m6T8n8fMz6",
@@ -78,7 +82,8 @@
       },
       "move_in_date": "2023-08-01",
       "landlord": "MNO Fastigheter",
-      "type": "regular"
+      "type": "regular",
+      "image": "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80"
     },
     {
       "id": "y9H7vJzW8K8xLr3c3qFt",
@@ -94,7 +99,8 @@
       },
       "move_in_date": "2023-09-01",
       "landlord": "PQR Fastigheter",
-      "type": "regular"
+      "type": "regular",
+      "image": "https://images.unsplash.com/photo-1614607242094-b1b2cf769ff3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1286&q=80"
     },
     {
       "id": "W8y8R2yJ2M2sKv6v2nHd",
@@ -110,7 +116,8 @@
       },
       "move_in_date": "2023-10-01",
       "landlord": "STU Fastigheter",
-      "type": "regular"
+      "type": "regular",
+      "image": "https://images.unsplash.com/photo-1606074280798-2dabb75ce10c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80"
     },
     {
       "id": "n5s6Z7vT6W8zJ2n2yTf",
@@ -126,7 +133,8 @@
       },
       "move_in_date": "2023-11-01",
       "landlord": "VWX Fastigheter",
-      "type": "student"
+      "type": "student",
+      "image": "https://images.unsplash.com/photo-1595599512948-b9831e5fc11c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80"
     },
     {
       "id": "hLp4cN8xV5j7F5f2mGvH",
@@ -142,7 +150,8 @@
       },
       "move_in_date": "2023-12-01",
       "landlord": "YZA Fastigheter",
-      "type": "regular"
+      "type": "regular",
+      "image": "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80"
     },
     {
       "id": "mKv6cN5mG2f8zS8hLxR",
@@ -158,7 +167,8 @@
       },
       "move_in_date": "2024-01-01",
       "landlord": "BCD Fastigheter",
-      "type": "regular"
+      "type": "regular",
+      "image": "https://images.unsplash.com/photo-1560185009-5bf9f2849488?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
     },
     {
       "id": "5R7vY8zS5s4N4p3qFtH",
@@ -174,7 +184,8 @@
       },
       "move_in_date": "2024-02-01",
       "landlord": "EFG Fastigheter",
-      "type": "regular"
+      "type": "regular",
+      "image": "https://images.unsplash.com/photo-1626965556132-43d76de1004f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=80"
     },
     {
       "id": "Lq8zS5xR2c6T8n6fMzH",
@@ -190,7 +201,8 @@
       },
       "move_in_date": "2024-03-01",
       "landlord": "HIJ Fastigheter",
-      "type": "regular"
+      "type": "regular",
+      "image": "https://images.unsplash.com/photo-1599202937077-3f7cdc53f2e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
     },
     {
       "id": "y9q3C6vJzW8K8xLr2nHd",
@@ -206,7 +218,8 @@
       },
       "move_in_date": "2024-04-01",
       "landlord": "KLM Fastigheter",
-      "type": "senior"
+      "type": "senior",
+      "image": "https://images.unsplash.com/photo-1590725121839-892b458a74fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
     },
     {
       "id": "T2m6T8n8fMz6J2n6LxH",
@@ -222,7 +235,8 @@
       },
       "move_in_date": "2024-05-01",
       "landlord": "NOP Fastigheter",
-      "type": "regular"
+      "type": "regular",
+      "image": "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80"
     },
     {
       "id": "sKv6v2nHdW8y8R2yJ2",
@@ -238,7 +252,8 @@
       },
       "move_in_date": "2024-06-01",
       "landlord": "QRS Fastigheter",
-      "type": "student"
+      "type": "student",
+      "image": "https://images.unsplash.com/photo-1466098672325-c9ddda4b7975?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
     },
     {
       "id": "M2sKv6cN5mG2f8zS8h",
@@ -254,7 +269,8 @@
       },
       "move_in_date": "2024-07-01",
       "landlord": "TUV Fastigheter",
-      "type": "senior"
+      "type": "senior",
+      "image": "https://images.unsplash.com/photo-1585670149967-b4f4da88cc9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     },
     {
       "id": "Lp4cN8xV5j7F5f2mGv",
@@ -270,7 +286,8 @@
       },
       "move_in_date": "2024-08-01",
       "landlord": "WXY Fastigheter",
-      "type": "regular"
+      "type": "regular",
+      "image": "https://images.unsplash.com/photo-1560448205-17d3a46c84de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     },
     {
       "id": "Hn5s6Z7vT6W8zJ2yTf",
@@ -286,7 +303,8 @@
       },
       "move_in_date": "2024-09-01",
       "landlord": "ZAB Fastigheter",
-      "type": "student"
+      "type": "student",
+      "image": "https://images.unsplash.com/photo-1582289545106-efecf907f21e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80"
     },
     {
       "id": "R5xS2f2qLyMzGv5F5c",
@@ -302,7 +320,8 @@
       },
       "move_in_date": "2024-10-01",
       "landlord": "CDE Fastigheter",
-      "type": "regular"
+      "type": "regular",
+      "image": "https://images.unsplash.com/photo-1615919879320-7ffe0898363f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
     },
     {
       "id": "vN8zS6xR2c5T8n7fMzJ",
@@ -318,7 +337,8 @@
       },
       "move_in_date": "2024-11-01",
       "landlord": "FGH Fastigheter",
-      "type": "regular"
+      "type": "regular",
+      "image": "https://images.unsplash.com/photo-1534532335525-79868382477e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1309&q=80"
     }
   ]
 }
