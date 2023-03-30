@@ -23,6 +23,12 @@ export default function Apartment({ apartment }) {
 
       <img src="../logo.svg" className="h-10 w-auto pl-12 mt-8 mb-8"></img>
 
+      <a href="../">
+        <button className="ml-12 mb-4 pt-2 pb-2 pl-4 pr-4 border border-black rounded-lg hover:bg-gray-100">
+          Back to home
+        </button>
+      </a>
+
       <div className="flex flex-row items-start">
         <div>
           <img

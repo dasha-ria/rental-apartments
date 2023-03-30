@@ -11,7 +11,7 @@ export default function Home({ apartments }) {
       <div className="flex gap-12 flex-wrap pt-8 justify-center items-center w-full">
         {apartments.map((apartment) => (
           <Link key={apartment.id} href={`/apartment/${apartment.id}`}>
-            <div className="p-4 flex flex-col gap-2 rounded-lg items-start hover:text-blue-800">
+            <div className="p-4 flex flex-col gap-2 rounded-lg items-start hover:text-gray-600">
               <div>
                 <img
                   src={apartment.image}
