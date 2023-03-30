@@ -20,9 +20,11 @@ export default function Home({ apartments }) {
               </div>
               <div>
                 <p className="font-medium">{`${apartment.address}, Malmö`}</p>
-                <div className="flex flex-row gap-4">
+                <div className="flex flex-row gap-2 items-center">
                   <p>{`${apartment.rooms} rooms`}</p>
+                  <div className="w-half h-half rounded-lg bg-black"></div>
                   <p>{`${apartment.area} sqm`}</p>
+                  <div className="w-half h-half rounded-lg bg-black"></div>
                   <p>{`${apartment.price} kr`}</p>
                 </div>
               </div>

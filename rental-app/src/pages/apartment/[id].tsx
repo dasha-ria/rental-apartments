@@ -25,19 +25,29 @@ export default function Apartment({ apartment }) {
 
       <img
         src={apartment.image}
-        className="ml-12 w-96 h-96 object-cover rounded-md"
+        className="ml-12 w-pic h-pic object-cover rounded-md"
       ></img>
-      <p>{`${apartment.address}, Malmö`}</p>
-      <p>{`${apartment.price} kr`}</p>
-      <p>{`${apartment.rooms} rooms`}</p>
-      <p>{`${apartment.area} sqm`}</p>
+      <div className="pl-12 pt-2">
+        <p className="font-medium">{`${apartment.address}, Malmö`}</p>
+        <div className="flex flex-row gap-2 items-center">
+          <p>{`${apartment.price} kr`}</p>
+          <div className="w-half h-half rounded-lg bg-black"></div>
+          <p>{`${apartment.rooms} rooms`}</p>
+          <div className="w-half h-half rounded-lg bg-black"></div>
+          <p>{`${apartment.area} sqm`}</p>
+        </div>
 
-      <p>Move-in date: {apartment.move_in_date}</p>
-      <p>Landlord: {apartment.landlord}</p>
-      <p>Apartment type: {apartment.type}</p>
+        <div className="w-96 h-thin bg-gray-200 mt-2 mb-2"></div>
 
-      <p>Hot water: {hotWater(apartment)}</p>
-      <p>Elevator: {elevator(apartment)}</p>
+        <p>Move-in date: {apartment.move_in_date}</p>
+        <p>Landlord: {apartment.landlord}</p>
+        <p>Apartment type: {apartment.type}</p>
+
+        <div className="w-96 h-thin bg-gray-200 mt-2 mb-2"></div>
+
+        <p>Hot water: {hotWater(apartment)}</p>
+        <p>Elevator: {elevator(apartment)}</p>
+      </div>
     </>
   );
 }
