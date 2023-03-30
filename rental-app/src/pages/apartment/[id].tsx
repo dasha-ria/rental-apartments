@@ -45,7 +45,7 @@ export default function Apartment({ apartment }) {
           <p className="font-medium">
             Elevator: <span className="font-normal">{elevator(apartment)}</span>
           </p>
-          <p className="font-medium<">
+          <p className="font-medium">
             Hot water:{" "}
             <span className="font-normal">{hotWater(apartment)}</span>
           </p>
