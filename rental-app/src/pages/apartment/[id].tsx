@@ -37,7 +37,7 @@ export default function Apartment({ apartment }) {
           ></img>
         </div>
         <div className="pl-12">
-          <p className="font-medium">{`${apartment.address}, Malmö`}</p>
+          <p className="font-medium text-lg">{`${apartment.address}, Malmö`}</p>
           <div className="flex flex-row gap-2 items-center">
             <p>{`${apartment.price} kr`}</p>
             <div className="w-half h-half rounded-lg bg-black"></div>
