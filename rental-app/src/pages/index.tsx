@@ -1,8 +1,26 @@
 import { GetServerSideProps } from "next";
 import Link from "next/link";
-import { Menu } from "@headlessui/react";
+import { Listbox } from "@headlessui/react";
+import { useState } from "react";
 
 export default function Home({ apartments }) {
+  const minRooms = [
+    { id: 1, num: 1 },
+    { id: 2, num: 2 },
+    { id: 3, num: 3 },
+    { id: 4, num: 4 },
+  ];
+
+  const maxRooms = [
+    { id: 1, num: 1 },
+    { id: 2, num: 2 },
+    { id: 3, num: 3 },
+    { id: 4, num: 4 },
+  ];
+
+  const [selectedMinRooms, setSelectedMinRooms] = useState(minRooms[0]);
+  const [selectedMaxRooms, setSelectedMaxRooms] = useState(maxRooms[0]);
+
   return (
     <>
       {/* <pre>{JSON.stringify(apartments, null, 2)}</pre> */}
@@ -62,7 +80,7 @@ export default function Home({ apartments }) {
             </div>
           </div>
           <div className="flex gap-6 pt-2">
-            <div className="flex flex-col">
+            {/* <div className="flex flex-col">
               <label className="flex flex-col">
                 Min rooms
                 <input
@@ -81,6 +99,31 @@ export default function Home({ apartments }) {
                   type="number"
                 ></input>
               </label>
+            </div> */}
+            <div className="flex flex-col">
+              <Listbox value={selectedMinRooms} onChange={setSelectedMinRooms}>
+                <Listbox.Button>{selectedMinRooms.num}</Listbox.Button>
+                <Listbox.Options>
+                  {minRooms.map((room) => (
+                    <Listbox.Option key={room.id} value={room}>
+                      {room.num}
+                    </Listbox.Option>
+                  ))}
+                </Listbox.Options>
+              </Listbox>
+            </div>
+
+            <div className="flex flex-col">
+              <Listbox value={selectedMaxRooms} onChange={setSelectedMaxRooms}>
+                <Listbox.Button>{selectedMaxRooms.num}</Listbox.Button>
+                <Listbox.Options>
+                  {maxRooms.map((room) => (
+                    <Listbox.Option key={room.id} value={room}>
+                      {room.num}
+                    </Listbox.Option>
+                  ))}
+                </Listbox.Options>
+              </Listbox>
             </div>
           </div>
         </div>
