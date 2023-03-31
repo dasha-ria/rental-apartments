@@ -64,7 +64,7 @@ export default function Home({ apartments }) {
           </div>
         </div>
 
-        <div className="flex gap-6">
+        <div className="flex gap-6 pt-2">
           <div className="flex flex-col">
             <label className="flex flex-col">
               Min rooms
@@ -88,7 +88,7 @@ export default function Home({ apartments }) {
         </div>
 
         <button
-          className="border border-black pt-2 pb-2 pl-6 pr-6 rounded-md mt-4 hover:bg-gray-100"
+          className="border border-black pt-2 pb-2 pl-6 pr-6 rounded-md mt-6 hover:bg-gray-100"
           type="submit"
         >
           Filter
