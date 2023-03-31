@@ -9,26 +9,81 @@ export default function Home({ apartments }) {
       {/* <pre>{JSON.stringify(apartments, null, 2)}</pre> */}
 
       <Link href="/">
-        <img src="logo.svg" className="h-10 w-auto pl-12 mt-8 max-w-4xl"></img>
+        <img
+          src="bosydlig.svg"
+          className="h-10 w-auto pl-12 mt-8 max-w-4xl"
+        ></img>
       </Link>
 
       <form className="pl-12 pt-12" autoComplete="off">
-        <div className="flex gap-8">
+        <div className="flex gap-16 flex-wrap">
+          <div className="flex gap-6">
+            <div className="flex flex-col">
+              <label className="flex flex-col">
+                Min price
+                <input
+                  className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
+                  name="minPrice"
+                  type="number"
+                ></input>
+              </label>
+            </div>
+            <div className="flex flex-col">
+              <label className="flex flex-col">
+                Max price
+                <input
+                  className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
+                  name="maxPrice"
+                  type="number"
+                ></input>
+              </label>
+            </div>
+          </div>
+
+          <div className="flex gap-6">
+            <div className="flex flex-col">
+              <label className="flex flex-col">
+                Min size
+                <input
+                  className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
+                  name="minSize"
+                  type="number"
+                ></input>
+              </label>
+            </div>
+            <div className="flex flex-col">
+              <label className="flex flex-col">
+                Max size
+                <input
+                  className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
+                  name="maxSize"
+                  type="number"
+                ></input>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex gap-6">
           <div className="flex flex-col">
-            <label>Min price</label>
-            <input
-              className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
-              name="minPrice"
-              type="number"
-            ></input>
+            <label className="flex flex-col">
+              Min rooms
+              <input
+                className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
+                name="minRooms"
+                type="number"
+              ></input>
+            </label>
           </div>
           <div className="flex flex-col">
-            <label>Max price</label>
-            <input
-              className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
-              name="maxPrice"
-              type="number"
-            ></input>
+            <label className="flex flex-col">
+              Max rooms
+              <input
+                className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
+                name="maxRooms"
+                type="number"
+              ></input>
+            </label>
           </div>
         </div>
 
@@ -82,8 +137,12 @@ export const getServerSideProps: GetServerSideProps = async ({
   params,
 }) => {
   const search = {
-    maxPrice: query.maxPrice as string,
     minPrice: query.minPrice as string,
+    maxPrice: query.maxPrice as string,
+    minSize: query.minArea as string,
+    maxSize: query.maxArea as string,
+    minRooms: query.minRooms as string,
+    maxRooms: query.maxRooms as string,
   };
 
   const searchParams = new URLSearchParams(search);
