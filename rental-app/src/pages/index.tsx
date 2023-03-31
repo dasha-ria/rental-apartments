@@ -1,6 +1,5 @@
 import { GetServerSideProps } from "next";
 import Link from "next/link";
-import { useState } from "react";
 import { Menu } from "@headlessui/react";
 
 export default function Home({ apartments }) {
@@ -16,7 +15,7 @@ export default function Home({ apartments }) {
       </Link>
 
       <form className="pl-12 pt-12" autoComplete="off">
-        <div className="flex gap-16 flex-wrap">
+        <div className="flex gap-x-16 gap-y-2 flex-wrap">
           <div className="flex gap-6">
             <div className="flex flex-col">
               <label className="flex flex-col">
@@ -62,28 +61,27 @@ export default function Home({ apartments }) {
               </label>
             </div>
           </div>
-        </div>
-
-        <div className="flex gap-6 pt-2">
-          <div className="flex flex-col">
-            <label className="flex flex-col">
-              Min rooms
-              <input
-                className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
-                name="minRooms"
-                type="number"
-              ></input>
-            </label>
-          </div>
-          <div className="flex flex-col">
-            <label className="flex flex-col">
-              Max rooms
-              <input
-                className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
-                name="maxRooms"
-                type="number"
-              ></input>
-            </label>
+          <div className="flex gap-6 pt-2">
+            <div className="flex flex-col">
+              <label className="flex flex-col">
+                Min rooms
+                <input
+                  className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
+                  name="minRooms"
+                  type="number"
+                ></input>
+              </label>
+            </div>
+            <div className="flex flex-col">
+              <label className="flex flex-col">
+                Max rooms
+                <input
+                  className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
+                  name="maxRooms"
+                  type="number"
+                ></input>
+              </label>
+            </div>
           </div>
         </div>
 
