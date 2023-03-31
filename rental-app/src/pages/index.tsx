@@ -11,9 +11,8 @@ export default function Home({ apartments }) {
       <Link href="/">
         <img src="logo.svg" className="h-10 w-auto pl-12 mt-8 max-w-4xl"></img>
       </Link>
-      <p className="pl-12 mt-8">Filter</p>
 
-      <form className="pl-12" autoComplete="off">
+      <form className="pl-12 pt-12" autoComplete="off">
         <div className="flex gap-8">
           <div className="flex flex-col">
             <label>Min price</label>
@@ -34,10 +33,10 @@ export default function Home({ apartments }) {
         </div>
 
         <button
-          className="border border-black h-10 w-16 rounded-md mt-4"
+          className="border border-black pt-2 pb-2 pl-6 pr-6 rounded-md mt-4 hover:bg-gray-100"
           type="submit"
         >
-          go
+          Filter
         </button>
       </form>
 
