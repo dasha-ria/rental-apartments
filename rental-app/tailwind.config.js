@@ -12,6 +12,9 @@ module.exports = {
         thin: "0.06rem",
         pic: "30rem",
       },
+      borderWidth: {
+        focusBorder: "0.1rem",
+      },
     },
   },
   plugins: [],

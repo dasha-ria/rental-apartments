@@ -1,12 +1,45 @@
 import { GetServerSideProps } from "next";
 import Link from "next/link";
+import { useState } from "react";
+import { Menu } from "@headlessui/react";
 
 export default function Home({ apartments }) {
   return (
     <>
       {/* <pre>{JSON.stringify(apartments, null, 2)}</pre> */}
 
-      <img src="logo.svg" className="h-10 w-auto pl-12 mt-8"></img>
+      <Link href="/">
+        <img src="logo.svg" className="h-10 w-auto pl-12 mt-8 max-w-4xl"></img>
+      </Link>
+      <p className="pl-12 mt-8">Filter</p>
+
+      <form className="pl-12" autoComplete="off">
+        <div className="flex gap-8">
+          <div className="flex flex-col">
+            <label>Min price</label>
+            <input
+              className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
+              name="minPrice"
+              type="number"
+            ></input>
+          </div>
+          <div className="flex flex-col">
+            <label>Max price</label>
+            <input
+              className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
+              name="maxPrice"
+              type="number"
+            ></input>
+          </div>
+        </div>
+
+        <button
+          className="border border-black h-10 w-16 rounded-md mt-4"
+          type="submit"
+        >
+          go
+        </button>
+      </form>
 
       <div className="flex gap-12 flex-wrap pt-8 justify-center items-center w-full">
         {apartments.map((apartment) => (
@@ -45,8 +78,19 @@ export default function Home({ apartments }) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const res = await fetch("http://localhost:5050/apartments");
+export const getServerSideProps: GetServerSideProps = async ({
+  query,
+  params,
+}) => {
+  const search = {
+    maxPrice: query.maxPrice as string,
+    minPrice: query.minPrice as string,
+  };
+
+  const searchParams = new URLSearchParams(search);
+  const res = await fetch(
+    "http://localhost:5050/apartments?" + searchParams.toString()
+  );
   const apartments = await res.json();
 
   return {
