@@ -3,21 +3,21 @@ import Link from "next/link";
 import { Listbox } from "@headlessui/react";
 import { useState } from "react";
 
+const minRooms = [
+  { id: 1, num: 1 },
+  { id: 2, num: 2 },
+  { id: 3, num: 3 },
+  { id: 4, num: 4 },
+];
+
+const maxRooms = [
+  { id: 1, num: 1 },
+  { id: 2, num: 2 },
+  { id: 3, num: 3 },
+  { id: 4, num: 4 },
+];
+
 export default function Home({ apartments }) {
-  const minRooms = [
-    { id: 1, num: 1 },
-    { id: 2, num: 2 },
-    { id: 3, num: 3 },
-    { id: 4, num: 4 },
-  ];
-
-  const maxRooms = [
-    { id: 1, num: 1 },
-    { id: 2, num: 2 },
-    { id: 3, num: 3 },
-    { id: 4, num: 4 },
-  ];
-
   const [selectedMinRooms, setSelectedMinRooms] = useState(minRooms[0]);
   const [selectedMaxRooms, setSelectedMaxRooms] = useState(maxRooms[0]);
 
@@ -102,11 +102,28 @@ export default function Home({ apartments }) {
             </div> */}
             <div className="flex flex-col">
               <Listbox value={selectedMinRooms} onChange={setSelectedMinRooms}>
-                <Listbox.Button>{selectedMinRooms.num}</Listbox.Button>
-                <Listbox.Options>
+                <label className="flex flex-col">
+                  Min rooms
+                  <Listbox.Button className="border border-black h-10 w-24 p-2 rounded-md">
+                    {selectedMinRooms.num}
+                  </Listbox.Button>
+                </label>
+                <Listbox.Options className="border border-black w-24 rounded-md pt-2 pb-2 mt-2 cursor-pointer">
                   {minRooms.map((room) => (
-                    <Listbox.Option key={room.id} value={room}>
-                      {room.num}
+                    <Listbox.Option
+                      className={({ active }) =>
+                        `pl-11 pt-1 pb-1 ${
+                          active ? "bg-gray-100 text-black" : "text-gray-900"
+                        }`
+                      }
+                      key={room.id}
+                      value={room}
+                    >
+                      {({ selected }) => (
+                        <span className={selected ? "font-bold" : null}>
+                          {room.num}
+                        </span>
+                      )}
                     </Listbox.Option>
                   ))}
                 </Listbox.Options>
@@ -115,11 +132,28 @@ export default function Home({ apartments }) {
 
             <div className="flex flex-col">
               <Listbox value={selectedMaxRooms} onChange={setSelectedMaxRooms}>
-                <Listbox.Button>{selectedMaxRooms.num}</Listbox.Button>
-                <Listbox.Options>
+                <label className="flex flex-col">
+                  Max rooms
+                  <Listbox.Button className="border border-black h-10 w-24 p-2 rounded-md">
+                    {selectedMaxRooms.num}
+                  </Listbox.Button>
+                </label>
+                <Listbox.Options className="border border-black w-24 rounded-md pt-2 pb-2 mt-2 cursor-pointer">
                   {maxRooms.map((room) => (
-                    <Listbox.Option key={room.id} value={room}>
-                      {room.num}
+                    <Listbox.Option
+                      className={({ active }) =>
+                        `pl-11 pt-1 pb-1 ${
+                          active ? "bg-gray-100 text-black" : "text-gray-900"
+                        }`
+                      }
+                      key={room.id}
+                      value={room}
+                    >
+                      {({ selected }) => (
+                        <span className={selected ? "font-bold" : null}>
+                          {room.num}
+                        </span>
+                      )}
                     </Listbox.Option>
                   ))}
                 </Listbox.Options>
