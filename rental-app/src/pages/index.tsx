@@ -17,9 +17,15 @@ const maxRooms = [
   { id: 4, num: 4 },
 ];
 
+const sort = [
+  { id: 1, name: 1 },
+  { id: 2, name: 2 },
+];
+
 export default function Home({ apartments }) {
   const [selectedMinRooms, setSelectedMinRooms] = useState(minRooms[0]);
   const [selectedMaxRooms, setSelectedMaxRooms] = useState(maxRooms[0]);
+  const [selectedSort, setSelectedSort] = useState(sort[0]);
 
   return (
     <>
@@ -79,7 +85,7 @@ export default function Home({ apartments }) {
               </label>
             </div>
           </div>
-          <div className="flex gap-6 pt-2">
+          <div className="flex gap-6 pt-2 md:pt-0">
             {/* <div className="flex flex-col">
               <label className="flex flex-col">
                 Min rooms
@@ -163,12 +169,44 @@ export default function Home({ apartments }) {
         </div>
 
         <button
-          className="border border-black pt-2 pb-2 pl-6 pr-6 rounded-md mt-2 hover:bg-gray-100"
+          className="border border-black pt-2 pb-2 pl-6 pr-6 rounded-md mt-6 hover:bg-gray-100"
           type="submit"
         >
           Filter
         </button>
       </form>
+
+      <div className="pl-12 pt-4">
+        <div className="flex flex-col">
+          <Listbox value={selectedSort} onChange={setSelectedSort}>
+            <label className="flex flex-col">
+              Sort by
+              <Listbox.Button className="border border-black h-10 w-24 p-2 rounded-md">
+                {selectedSort.name}
+              </Listbox.Button>
+            </label>
+            <Listbox.Options className="border border-black w-24 rounded-md pt-2 pb-2 mt-2 cursor-pointer">
+              {sort.map((item) => (
+                <Listbox.Option
+                  className={({ active }) =>
+                    `pl-11 pt-1 pb-1 ${
+                      active ? "bg-gray-100 text-black" : "text-gray-900"
+                    }`
+                  }
+                  key={item.id}
+                  value={item}
+                >
+                  {({ selected }) => (
+                    <span className={selected ? "font-bold" : null}>
+                      {item.name}
+                    </span>
+                  )}
+                </Listbox.Option>
+              ))}
+            </Listbox.Options>
+          </Listbox>
+        </div>
+      </div>
 
       <div className="flex gap-12 flex-wrap pt-8 pl-12 w-full">
         {apartments.map((apartment) => (
