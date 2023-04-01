@@ -18,8 +18,8 @@ const maxRooms = [
 ];
 
 const sort = [
-  { id: 1, name: 1 },
-  { id: 2, name: 2 },
+  { id: 1, name: "Low to high price" },
+  { id: 2, name: "High to low price" },
 ];
 
 export default function Home({ apartments }) {
@@ -181,15 +181,15 @@ export default function Home({ apartments }) {
           <Listbox value={selectedSort} onChange={setSelectedSort}>
             <label className="flex flex-col">
               Sort by
-              <Listbox.Button className="border border-black h-10 w-24 p-2 rounded-md">
+              <Listbox.Button className="border border-black h-10 w-48 p-2 rounded-md">
                 {selectedSort.name}
               </Listbox.Button>
             </label>
-            <Listbox.Options className="border border-black w-24 rounded-md pt-2 pb-2 mt-2 cursor-pointer">
+            <Listbox.Options className="border border-black w-48 rounded-md pt-2 pb-2 mt-2 cursor-pointer">
               {sort.map((item) => (
                 <Listbox.Option
                   className={({ active }) =>
-                    `pl-11 pt-1 pb-1 ${
+                    `pl-8 pt-1 pb-1 ${
                       active ? "bg-gray-100 text-black" : "text-gray-900"
                     }`
                   }
