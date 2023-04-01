@@ -163,7 +163,7 @@ export default function Home({ apartments }) {
         </div>
 
         <button
-          className="border border-black pt-2 pb-2 pl-6 pr-6 rounded-md mt-6 hover:bg-gray-100"
+          className="border border-black pt-2 pb-2 pl-6 pr-6 rounded-md mt-2 hover:bg-gray-100"
           type="submit"
         >
           Filter
@@ -173,7 +173,7 @@ export default function Home({ apartments }) {
       <div className="flex gap-12 flex-wrap pt-8 pl-12 w-full">
         {apartments.map((apartment) => (
           <Link key={apartment.id} href={`/apartment/${apartment.id}`}>
-            <div className=" flex flex-col gap-2 rounded-lg items-start">
+            <div className="flex flex-col gap-2 rounded-lg items-start">
               <div className="relative">
                 <div>
                   <img
@@ -218,6 +218,7 @@ export const getServerSideProps: GetServerSideProps = async ({
     maxSize: query.maxArea as string,
     minRooms: query.minRooms as string,
     maxRooms: query.maxRooms as string,
+    sort: query.sort as string,
   };
 
   const searchParams = new URLSearchParams(search);
