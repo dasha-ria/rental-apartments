@@ -18,14 +18,19 @@ const maxRooms = [
 ];
 
 const sort = [
-  { id: 1, name: "Low to high price" },
-  { id: 2, name: "High to low price" },
+  { id: "sort-asc", name: "Low to high price" },
+  { id: "sort-desc", name: "High to low price" },
 ];
 
 export default function Home({ apartments }) {
   const [selectedMinRooms, setSelectedMinRooms] = useState(minRooms[0]);
   const [selectedMaxRooms, setSelectedMaxRooms] = useState(maxRooms[0]);
   const [selectedSort, setSelectedSort] = useState(sort[0]);
+
+  function selectSorting(sortId) {
+    console.log("SORTID", sortId);
+    setSelectedSort(sort.find((s) => s.id === sortId));
+  }
 
   return (
     <>
@@ -168,6 +173,34 @@ export default function Home({ apartments }) {
           </div>
         </div>
 
+        {/* <Listbox value={selectedSort.id} onChange={selectSorting}>
+          <label className="flex flex-col">
+            Sort by
+            <Listbox.Button className="border border-black h-10 w-48 p-2 rounded-md">
+              {selectedSort.name}
+            </Listbox.Button>
+          </label>
+          <Listbox.Options className="border border-black w-48 rounded-md pt-2 pb-2 mt-2 cursor-pointer">
+            {sort.map((item) => (
+              <Listbox.Option
+                className={({ active }) =>
+                  `pl-8 pt-1 pb-1 ${
+                    active ? "bg-gray-100 text-black" : "text-gray-900"
+                  }`
+                }
+                key={item.id}
+                value={item}
+              >
+                {({ selected }) => (
+                  <span className={selected ? "font-bold" : null}>
+                    {item.name}
+                  </span>
+                )}
+              </Listbox.Option>
+            ))}
+          </Listbox.Options>
+        </Listbox> */}
+
         <button
           className="border border-black pt-2 pb-2 pl-6 pr-6 rounded-md mt-6 hover:bg-gray-100"
           type="submit"
@@ -177,35 +210,7 @@ export default function Home({ apartments }) {
       </form>
 
       <div className="pl-12 pt-4">
-        <div className="flex flex-col">
-          <Listbox value={selectedSort} onChange={setSelectedSort}>
-            <label className="flex flex-col">
-              Sort by
-              <Listbox.Button className="border border-black h-10 w-48 p-2 rounded-md">
-                {selectedSort.name}
-              </Listbox.Button>
-            </label>
-            <Listbox.Options className="border border-black w-48 rounded-md pt-2 pb-2 mt-2 cursor-pointer">
-              {sort.map((item) => (
-                <Listbox.Option
-                  className={({ active }) =>
-                    `pl-8 pt-1 pb-1 ${
-                      active ? "bg-gray-100 text-black" : "text-gray-900"
-                    }`
-                  }
-                  key={item.id}
-                  value={item}
-                >
-                  {({ selected }) => (
-                    <span className={selected ? "font-bold" : null}>
-                      {item.name}
-                    </span>
-                  )}
-                </Listbox.Option>
-              ))}
-            </Listbox.Options>
-          </Listbox>
-        </div>
+        <div className="flex flex-col"></div>
       </div>
 
       <div className="flex gap-12 flex-wrap pt-8 pl-12 w-full">
