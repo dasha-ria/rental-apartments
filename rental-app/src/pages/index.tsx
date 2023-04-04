@@ -3,34 +3,27 @@ import Link from "next/link";
 import { Listbox } from "@headlessui/react";
 import { useState } from "react";
 
-const minRooms = [
-  { id: 1, num: 1 },
-  { id: 2, num: 2 },
-  { id: 3, num: 3 },
-  { id: 4, num: 4 },
-];
+const minRooms = [undefined, 1, 2, 3, 4];
+const maxRooms = [undefined, 1, 2, 3, 4];
 
-const maxRooms = [
-  { id: 1, num: 1 },
-  { id: 2, num: 2 },
-  { id: 3, num: 3 },
-  { id: 4, num: 4 },
-];
+const sort = [undefined, "price-asc", "price-desc"];
 
-const sort = [
-  { id: "sort-asc", name: "Low to high price" },
-  { id: "sort-desc", name: "High to low price" },
-];
+function getSortLabelById(sortId) {
+  if (sortId === "price-asc") {
+    return "Low to high price";
+  } else if (sortId === "price-desc") {
+    return "High to low price";
+  } else if (sortId === undefined) {
+    return "No sorting";
+  } else {
+    throw new Error("Invalid sort ID");
+  }
+}
 
 export default function Home({ apartments }) {
   const [selectedMinRooms, setSelectedMinRooms] = useState(minRooms[0]);
   const [selectedMaxRooms, setSelectedMaxRooms] = useState(maxRooms[0]);
   const [selectedSort, setSelectedSort] = useState(sort[0]);
-
-  function selectSorting(sortId) {
-    console.log("SORTID", sortId);
-    setSelectedSort(sort.find((s) => s.id === sortId));
-  }
 
   return (
     <>
@@ -112,11 +105,15 @@ export default function Home({ apartments }) {
               </label>
             </div> */}
             <div className="flex flex-col">
-              <Listbox value={selectedMinRooms} onChange={setSelectedMinRooms}>
+              <Listbox
+                value={selectedMinRooms}
+                onChange={setSelectedMinRooms}
+                name="minRooms"
+              >
                 <label className="flex flex-col">
                   Min rooms
                   <Listbox.Button className="border border-black h-10 w-24 p-2 rounded-md">
-                    {selectedMinRooms.num}
+                    {selectedMinRooms}
                   </Listbox.Button>
                 </label>
                 <Listbox.Options className="border border-black w-24 rounded-md pt-2 pb-2 mt-2 cursor-pointer">
@@ -127,12 +124,12 @@ export default function Home({ apartments }) {
                           active ? "bg-gray-100 text-black" : "text-gray-900"
                         }`
                       }
-                      key={room.id}
+                      key={room}
                       value={room}
                     >
                       {({ selected }) => (
                         <span className={selected ? "font-bold" : null}>
-                          {room.num}
+                          {room}
                         </span>
                       )}
                     </Listbox.Option>
@@ -142,11 +139,15 @@ export default function Home({ apartments }) {
             </div>
 
             <div className="flex flex-col">
-              <Listbox value={selectedMaxRooms} onChange={setSelectedMaxRooms}>
+              <Listbox
+                value={selectedMaxRooms}
+                onChange={setSelectedMaxRooms}
+                name="maxRooms"
+              >
                 <label className="flex flex-col">
                   Max rooms
                   <Listbox.Button className="border border-black h-10 w-24 p-2 rounded-md">
-                    {selectedMaxRooms.num}
+                    {selectedMaxRooms}
                   </Listbox.Button>
                 </label>
                 <Listbox.Options className="border border-black w-24 rounded-md pt-2 pb-2 mt-2 cursor-pointer">
@@ -157,12 +158,12 @@ export default function Home({ apartments }) {
                           active ? "bg-gray-100 text-black" : "text-gray-900"
                         }`
                       }
-                      key={room.id}
+                      key={room}
                       value={room}
                     >
                       {({ selected }) => (
                         <span className={selected ? "font-bold" : null}>
-                          {room.num}
+                          {room}
                         </span>
                       )}
                     </Listbox.Option>
@@ -173,11 +174,11 @@ export default function Home({ apartments }) {
           </div>
         </div>
 
-        {/* <Listbox value={selectedSort.id} onChange={selectSorting}>
+        <Listbox value={selectedSort} onChange={setSelectedSort} name="sort">
           <label className="flex flex-col">
             Sort by
             <Listbox.Button className="border border-black h-10 w-48 p-2 rounded-md">
-              {selectedSort.name}
+              {getSortLabelById(selectedSort)}
             </Listbox.Button>
           </label>
           <Listbox.Options className="border border-black w-48 rounded-md pt-2 pb-2 mt-2 cursor-pointer">
@@ -188,18 +189,18 @@ export default function Home({ apartments }) {
                     active ? "bg-gray-100 text-black" : "text-gray-900"
                   }`
                 }
-                key={item.id}
+                key={item}
                 value={item}
               >
                 {({ selected }) => (
                   <span className={selected ? "font-bold" : null}>
-                    {item.name}
+                    {getSortLabelById(item)}
                   </span>
                 )}
               </Listbox.Option>
             ))}
           </Listbox.Options>
-        </Listbox> */}
+        </Listbox>
 
         <button
           className="border border-black pt-2 pb-2 pl-6 pr-6 rounded-md mt-6 hover:bg-gray-100"
@@ -272,7 +273,7 @@ export const getServerSideProps: GetServerSideProps = async ({
 
   return {
     props: {
-      apartments: apartments,
+      apartments,
     },
   };
 };
