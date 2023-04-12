@@ -175,7 +175,7 @@ export default function Home({ apartments }) {
         </div>
 
         <Listbox value={selectedSort} onChange={setSelectedSort} name="sort">
-          <label className="flex flex-col">
+          <label className="flex flex-col mt-2">
             Sort by
             <Listbox.Button className="border border-black h-10 w-48 p-2 rounded-md">
               {getSortLabelById(selectedSort)}
