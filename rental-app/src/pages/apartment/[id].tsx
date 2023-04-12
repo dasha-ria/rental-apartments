@@ -68,6 +68,12 @@ export default function Apartment({ apartment }) {
             Apartment type:{" "}
             <span className="font-normal">{apartment.type}</span>
           </p>
+
+          <a href="../">
+            <button className="mt-16 pt-2 pb-2 pl-4 pr-4 border border-black rounded-lg hover:bg-gray-100">
+              Apply
+            </button>
+          </a>
         </div>
       </div>
     </>
