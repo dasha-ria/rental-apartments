@@ -20,9 +20,13 @@ function getSortLabelById(sortId) {
   }
 }
 
-export default function Home({ apartments }) {
-  const [selectedMinRooms, setSelectedMinRooms] = useState(minRooms[0]);
-  const [selectedMaxRooms, setSelectedMaxRooms] = useState(maxRooms[0]);
+export default function Home({ apartments, search }) {
+  const [selectedMinRooms, setSelectedMinRooms] = useState(
+    search?.minRooms ?? minRooms[0]
+  );
+  const [selectedMaxRooms, setSelectedMaxRooms] = useState(
+    search?.maxRooms ?? maxRooms[0]
+  );
   const [selectedSort, setSelectedSort] = useState(sort[0]);
 
   return (
@@ -46,6 +50,7 @@ export default function Home({ apartments }) {
                   className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
                   name="minPrice"
                   type="number"
+                  defaultValue={search.minPrice}
                 ></input>
               </label>
             </div>
@@ -56,6 +61,7 @@ export default function Home({ apartments }) {
                   className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
                   name="maxPrice"
                   type="number"
+                  defaultValue={search.maxPrice}
                 ></input>
               </label>
             </div>
@@ -69,6 +75,7 @@ export default function Home({ apartments }) {
                   className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
                   name="minSize"
                   type="number"
+                  defaultValue={search.minSize}
                 ></input>
               </label>
             </div>
@@ -79,6 +86,7 @@ export default function Home({ apartments }) {
                   className="border border-black focus:outline-none focus:border-focusBorder h-10 w-36 p-2 rounded-md"
                   name="maxSize"
                   type="number"
+                  defaultValue={search.maxSize}
                 ></input>
               </label>
             </div>
@@ -256,14 +264,14 @@ export const getServerSideProps: GetServerSideProps = async ({
   params,
 }) => {
   const search = {
-    minPrice: query.minPrice as string,
-    maxPrice: query.maxPrice as string,
-    minSize: query.minArea as string,
-    maxSize: query.maxArea as string,
-    minRooms: query.minRooms as string,
-    maxRooms: query.maxRooms as string,
-    sort: query.sort as string,
-  };
+    minPrice: query.minPrice ?? null,
+    maxPrice: query.maxPrice ?? null,
+    minSize: query.minArea ?? null,
+    maxSize: query.maxArea ?? null,
+    minRooms: query.minRooms ?? null,
+    maxRooms: query.maxRooms ?? null,
+    sort: query.sort ?? null,
+  } as Record<string, string | null>;
 
   const searchParams = new URLSearchParams(search);
   const res = await fetch(
@@ -274,6 +282,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   return {
     props: {
       apartments,
+      search,
     },
   };
 };
