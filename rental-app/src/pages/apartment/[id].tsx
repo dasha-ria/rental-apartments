@@ -68,14 +68,30 @@ export default function Apartment({ apartment }) {
             Apartment type:{" "}
             <span className="font-normal">{apartment.type}</span>
           </p>
-
-          <a href="../">
-            <button className="mt-16 pt-2 pb-2 pl-4 pr-4 border border-black rounded-lg hover:bg-gray-100">
-              Apply
-            </button>
-          </a>
         </div>
       </div>
+
+      <h3>Apply!</h3>
+      <form>
+        <div className="flex flex-col">
+          <label for="firstname">First name</label>
+          <input
+            type="text"
+            className="border border-black w-48"
+            name="firstname"
+            id="firstname"
+          ></input>
+        </div>
+        <div className="flex flex-col">
+          <label for="lastname">Last name</label>
+          <input
+            type="text"
+            className="border border-black w-48"
+            name="lastname"
+            id="lastname"
+          ></input>
+        </div>
+      </form>
     </>
   );
 }
