@@ -107,7 +107,7 @@ export default function Apartment({ apartment }) {
             <label for="phone">Phone number</label>
             <input
               type="number"
-              className="border border-black w-48 rounded-md p-2 focus:outline-none focus:border-focusBorder"
+              className="border border-black w-48 rounded-md p-2 focus:outline-none focus:border-focusBorder [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               name="phone"
               id="phone"
             ></input>
