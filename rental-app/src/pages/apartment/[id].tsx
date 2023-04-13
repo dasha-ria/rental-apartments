@@ -71,14 +71,14 @@ export default function Apartment({ apartment }) {
         </div>
       </div>
 
-      <h3 className="ml-12 mt-4 text-lg font-semibold">Apply now!</h3>
+      <h3 className="ml-12 mt-6 text-lg font-semibold">Apply now!</h3>
       <form autoComplete="off" id="form" className="ml-12">
-        <div className="flex gap-24">
+        <div className="flex gap-24 mb-4 mt-2">
           <div className="flex flex-col">
             <label for="firstname">First name</label>
             <input
               type="text"
-              className="border border-black w-48"
+              className="border border-black w-48 rounded-md p-2 focus:outline-none focus:border-focusBorder"
               name="firstname"
               id="firstname"
             ></input>
@@ -87,18 +87,18 @@ export default function Apartment({ apartment }) {
             <label for="lastname">Last name</label>
             <input
               type="text"
-              className="border border-black w-48"
+              className="border border-black w-48 rounded-md p-2 focus:outline-none focus:border-focusBorder"
               name="lastname"
               id="lastname"
             ></input>
           </div>
         </div>
-        <div className="flex gap-24">
+        <div className="flex gap-24 mb-4">
           <div className="flex flex-col">
             <label for="email">Email address</label>
             <input
               type="email"
-              className="border border-black w-48"
+              className="border border-black w-48 rounded-md p-2 focus:outline-none focus:border-focusBorder"
               name="email"
               id="email"
             ></input>
@@ -107,7 +107,7 @@ export default function Apartment({ apartment }) {
             <label for="phone">Phone number</label>
             <input
               type="number"
-              className="border border-black w-48"
+              className="border border-black w-48 rounded-md p-2 focus:outline-none focus:border-focusBorder"
               name="phone"
               id="phone"
             ></input>
@@ -116,7 +116,7 @@ export default function Apartment({ apartment }) {
         <div className="flex flex-col">
           <label for="message">Message</label>
           <textarea
-            className="border border-black w-96"
+            className="border border-black w-96 rounded-md p-2 focus:outline-none focus:border-focusBorder"
             name="message"
             id="message"
           ></textarea>
