@@ -1,4 +1,5 @@
 import { GetServerSideProps } from "next";
+import Link from "next/link";
 
 export default function Apartment({ apartment }) {
   const hotWater = (e) => {
@@ -21,13 +22,18 @@ export default function Apartment({ apartment }) {
     <>
       {/* <pre>{JSON.stringify(apartment, null, 2)}</pre> */}
 
-      <img src="../bosydlig.svg" className="h-10 w-auto pl-12 mt-8 mb-12"></img>
+      <Link href="/">
+        <img
+          src="../bosydlig.svg"
+          className="h-10 w-auto pl-12 mt-8 mb-12"
+        ></img>
+      </Link>
 
-      <a href="../">
+      <Link href="../">
         <button className="ml-12 mb-4 pt-2 pb-2 pl-4 pr-4 border border-black rounded-lg hover:bg-gray-100">
           Back to home
         </button>
-      </a>
+      </Link>
 
       <div className="flex flex-row items-start">
         <div>
